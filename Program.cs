@@ -42,7 +42,7 @@ namespace ShootingDice
             OneHigherPlayer higherPlayer = new OneHigherPlayer();
             higherPlayer.Name = "vanquisher";
 
-            smackTalkPlayer.Play(higherPlayer);
+            player3.Play(higherPlayer);
 
             Console.WriteLine("-------------------");
 
@@ -61,8 +61,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SoreLoserPlayer Loser = new SoreLoserPlayer();
+            Loser.Name = "wack";
+
+            player1.Play(Loser);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalkPlayer, higherPlayer, u, smack
+                player1, player2, player3, large, smackTalkPlayer, higherPlayer, u, smack, Loser
             };
 
             PlayMany(players);
