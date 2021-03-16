@@ -49,7 +49,7 @@ namespace ShootingDice
             HumanPlayer u = new HumanPlayer();
             u.Name = "You";
 
-            smackTalkPlayer.Play(u);
+            player3.Play(u);
 
             Console.WriteLine("-------------------");
 
