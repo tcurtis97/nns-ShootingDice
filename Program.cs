@@ -28,28 +28,28 @@ namespace ShootingDice
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
 
-            player1.Play(large);
+            large.Play(player3);
 
             Console.WriteLine("-------------------");
 
             CreativeSmackTalkingPlayer smackTalkPlayer = new CreativeSmackTalkingPlayer();
             smackTalkPlayer.Name = "badmouth mcgee";
 
-            large.Play(smackTalkPlayer);
+            smackTalkPlayer.Play(player3);
 
             Console.WriteLine("-------------------");
 
             OneHigherPlayer higherPlayer = new OneHigherPlayer();
             higherPlayer.Name = "vanquisher";
 
-            player3.Play(higherPlayer);
+            higherPlayer.Play(player3);
 
             Console.WriteLine("-------------------");
 
-            HumanPlayer u = new HumanPlayer();
-            u.Name = "You";
+            // HumanPlayer u = new HumanPlayer();
+            // u.Name = "You";
 
-            player3.Play(u);
+            // player3.Play(u);
 
             Console.WriteLine("-------------------");
 
@@ -57,19 +57,26 @@ namespace ShootingDice
             smack.Name = "smacky";
             smack.Taunt = "About to win me a new pair of shoes";
 
-            player1.Play(smack);
+            smack.Play(player1);
 
             Console.WriteLine("-------------------");
 
             SoreLoserPlayer Loser = new SoreLoserPlayer();
             Loser.Name = "wack";
 
-            player1.Play(Loser);
+            Loser.Play(player1);
+
+            Console.WriteLine("-------------------");
+
+            UpperHalfPlayer Upper = new UpperHalfPlayer();
+            Upper.Name = "Up";
+
+            Upper.Play(player3);
 
             Console.WriteLine("-------------------");
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalkPlayer, higherPlayer, u, smack, Loser
+                player1, player2, player3, large, smackTalkPlayer, higherPlayer,  smack, Loser, Upper
             };
 
             PlayMany(players);
