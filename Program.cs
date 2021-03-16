@@ -46,10 +46,10 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
-            // HumanPlayer u = new HumanPlayer();
-            // u.Name = "You";
+            HumanPlayer u = new HumanPlayer();
+            u.Name = "You";
 
-            // player3.Play(u);
+            u.Play(player3);
 
             Console.WriteLine("-------------------");
 
@@ -75,8 +75,16 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SoreLoserUpperHalfPlayer bigWack = new SoreLoserUpperHalfPlayer();
+            bigWack.Name = "biggerWack";
+
+            bigWack.Play(player3);
+
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalkPlayer, higherPlayer,  smack, Loser, Upper
+                player1, player2, player3, large, smackTalkPlayer, higherPlayer,  smack, Loser, Upper, bigWack, u
             };
 
             PlayMany(players);
